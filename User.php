@@ -13,5 +13,11 @@ class User {
         $this->last_name = $_last_name;
         $this->registration_number = $_registration_number;
     }
+
+    public function isActive() {
+        if ($this->days_since_last_login <= 30) {
+            return true;
+        }
+    }
 }
 ?>
