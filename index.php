@@ -13,10 +13,13 @@ $c ->days_since_last_login = 60;
 
 
 $a_plus = new Plus("Frodo", "Baggins");
+$a_plus -> days_since_last_login = 0;
 
 $b_plus = new Plus("Lupo", "Lucio");
+$b_plus -> days_since_last_login = 20;
 
-$c_Plus = new Plus("Mia", "Martini");
+$c_plus = new Plus("Mia", "Martini");
+$c_plus -> days_since_last_login = 290;
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +33,9 @@ $c_Plus = new Plus("Mia", "Martini");
 <body>
 <h2>Clienti attivi:</h2>
     <ol>
+        <?php if($a_plus->isActive()){echo("<li>" . $a_plus->last_name. "</li>") ;} ?>
+        <?php if($b_plus->isActive()){echo("<li>" . $b_plus->last_name. "</li>") ;} ?>
+        <?php if($c_plus->isActive()){echo("<li>" . $c_plus->last_name. "</li>") ;} ?>
         <?php if($a->isActive()){echo("<li>" . $a->last_name. "</li>") ;} ?>
         <?php if($b->isActive()){echo("<li>" . $b->last_name. "</li>") ;} ?>
         <?php if($c->isActive()){echo("<li>" . $c->last_name. "</li>") ;} ?>
