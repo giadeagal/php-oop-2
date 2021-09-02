@@ -1,14 +1,22 @@
 <?php
 
-require_once "User.php";
+require_once "Plus.php";
 
 $a = new User("Alfred", "Weber", 001);
 $a ->days_since_last_login = 10;
+
 $b = new User("Robin", "Hood", 002);
 $b ->days_since_last_login = 30;
+
 $c = new User("Ron", "Weasley", 003);
 $c ->days_since_last_login = 60;
 
+
+$a_plus = new Plus("Frodo", "Baggins");
+
+$b_plus = new Plus("Lupo", "Lucio");
+
+$c_Plus = new Plus("Mia", "Martini");
 ?>
 
 <!DOCTYPE html>
